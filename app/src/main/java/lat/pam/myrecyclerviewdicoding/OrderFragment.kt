@@ -35,6 +35,10 @@ class OrderFragment : Fragment() {
             Product("Bebek Goreng", "Rp 35.000", R.drawable.begor),
             Product("Mie Ayam Bakso", "Rp 20.000", R.drawable.miayam),
             Product("Ketoprak", "Rp 22.000", R.drawable.ketoprak),
+            Product("Soto Mie Bogor", "Rp 27.000", R.drawable.sotomi),
+            Product("Batagor", "Rp 10.000", R.drawable.batagor),
+            Product("Sop Daging", "Rp 40.000", R.drawable.sopdaging),
+            Product("Bubur Ayam", "Rp 12.000", R.drawable.bubur),
             )
     }
 }
