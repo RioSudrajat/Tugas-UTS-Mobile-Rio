@@ -3,6 +3,9 @@
     <style name="Base.Theme.MyRecyclerViewDicoding" parent="Theme.Material3.DayNight">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/green</item>
+
+        <item name="colorAccent">@color/green2</item>
     </style>
 
     <style name="Theme.MyRecyclerViewDicoding" parent="Base.Theme.MyRecyclerViewDicoding" />

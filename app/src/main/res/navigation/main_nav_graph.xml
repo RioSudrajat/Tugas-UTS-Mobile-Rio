@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph.xml"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="lat.pam.myrecyclerviewdicoding.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home_to_order"
+            app:destination="@id/nav_order" />
+
+        <action
+            android:id="@+id/action_home_to_checkout"
+            app:destination="@id/checkoutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_order"
+        android:name="lat.pam.myrecyclerviewdicoding.OrderFragment"
+        android:label="fragment_order"
+        tools:layout="@layout/fragment_order" >
+        <action
+            android:id="@+id/action_order_to_checkout"
+            app:destination="@id/checkoutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="lat.pam.myrecyclerviewdicoding.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/checkoutFragment"
+        android:name="lat.pam.myrecyclerviewdicoding.CheckoutFragment"
+        android:label="fragment_checkout"
+        tools:layout="@layout/fragment_checkout" >
+        <action
+            android:id="@+id/action_checkout_to_thankyou"
+            app:destination="@id/thankYouFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/thankYouFragment"
+        android:name="lat.pam.myrecyclerviewdicoding.ThankYouFragment"
+        android:label="fragment_thank_you"
+        tools:layout="@layout/fragment_thank_you" >
+        <action
+            android:id="@+id/action_thankyou_to_home"
+            app:destination="@id/nav_home"
+            app:popUpTo="@id/nav_home"
+            app:popUpToInclusive="true"
+            />
+    </fragment>
+</navigation>

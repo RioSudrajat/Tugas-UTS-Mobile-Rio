@@ -1,0 +1,126 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5"
+    tools:context=".ProfileFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Akun Saya"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="2dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/img_profile_picture"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/ic_profile"
+                app:tint="@color/green"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_profile_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/img_profile_picture"
+                app:layout_constraintTop_toTopOf="@id/img_profile_picture"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="Nama Pengguna" />
+
+            <TextView
+                android:id="@+id/tv_profile_email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@id/img_profile_picture"
+                app:layout_constraintTop_toBottomOf="@id/tv_profile_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="email@pengguna.com" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="24dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Riwayat Pesanan"
+                android:drawablePadding="16dp"
+                android:padding="12dp"
+                android:gravity="center_vertical"
+                android:background="?attr/selectableItemBackground"
+                app:drawableStartCompat="@drawable/ic_history"
+                app:drawableEndCompat="@drawable/ic_chevron_right" />
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#EEE" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pusat Bantuan"
+                android:drawablePadding="16dp"
+                android:padding="12dp"
+                android:gravity="center_vertical"
+                android:background="?attr/selectableItemBackground"
+                app:drawableStartCompat="@drawable/ic_help"
+                app:drawableEndCompat="@drawable/ic_chevron_right" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:layout_margin="16dp"
+        android:paddingVertical="14dp"
+        app:backgroundTint="@android:color/holo_red_light"/>
+</LinearLayout>
